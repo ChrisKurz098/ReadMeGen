@@ -1,9 +1,9 @@
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-# d
+# ReadMeGen
 
 ## Description
-    d 
+    This program will generate a markdown formatted readmefile based off user input 
 
 
 ## Table of Contents  
@@ -13,22 +13,20 @@
 
 
 ## Installation
-    d
+    Requires Node.js and the installation of inquirer via npm
          
 
 ## Usage
-    dd
+    This program allows the user to easily create a new README.md file for their projects
            
 ## Questions
 
-If you have any questions, contact d at:
+If you have any questions, contact Chris at:
 
-[d](mailto:d)
+[billgonzo123@gmail.com](mailto:billgonzo123@gmail.com)
 
-Check me out at [Github](https://github.com/d)
-
+Check me out at [Github](https://github.com/chrisKurz098)
 
 
 ## Licence
-    GNU AGPLv3
-        
+This software is distributed under the GNU AGPLv3 licence.

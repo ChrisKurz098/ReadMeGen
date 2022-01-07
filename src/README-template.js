@@ -1,8 +1,8 @@
 
 module.exports = ({ name, gitName, email, title, description,licence, ...rest }) => {
-    licenceData = getLicenceBadge(licence);
+    licenceData = getLicenceBadge();
     const readmeText = `
-${licenceData[0]}
+${licenceData[licence]}
 # ${title}
 
 ## Description
@@ -15,9 +15,10 @@ If you have any questions, contact ${name} at:
 
 [${email}](mailto:${email})
 
-Check me out at [Github](https://github.com/${gitName})
+Check me out on [Github](https://github.com/${gitName})
 
-${generateSection('Licence', licence)}
+${licenceMessage(licence)}
+${licenceData[licence]}
 `
     console.log(readmeText);
     return readmeText;
@@ -70,17 +71,25 @@ const generateSection = (title, data) => {
 }
 
 
-const getLicenceBadge = (licenceType) => {
+const getLicenceBadge = () => {
     licenceObj = {
-        'GNU AGPLv3': [`[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`] ,
-        'GNU GPLv3': [`[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)` ],
-        'GNU LGPLv3': [`[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)`] ,
-        'Mozilla Public License 2.0': [`[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`] ,
-        'Apache License 2.0': [`[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`] ,
-        'MIT License': [`[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`] ,
-        'Boost Software License 1.0': [`[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)` ] ,
-        'The Unlicense': [`[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)` ] 
+        'GNU AGPLv3': `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`,
+        'GNU GPLv3': `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)` ,
+        'GNU LGPLv3': `[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)` ,
+        'Mozilla Public License 2.0': `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)` ,
+        'Apache License 2.0': `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)` ,
+        'MIT License': `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`,
+        'Boost Software License 1.0': `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`  ,
+        'The Unlicense': `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)` 
     }
-    return licenceObj[licenceType];
+    return licenceObj;
+}
+
+const licenceMessage = licence => {
+    
+ const text =  `
+## Licence
+This software is distributed under the ${licence} licence.`
+return text;
 }
 
