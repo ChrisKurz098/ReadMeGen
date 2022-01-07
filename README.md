@@ -18,7 +18,7 @@
          
 
 ## Usage
-    This programs alllows the user to easily create README.md files for thir projects.
+    This programs alllows the user to easily create README.md files for their projects.
            
 ## Questions
 Chris Kurz              [Github](https://github.com/chriskurz098)
