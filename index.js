@@ -1,7 +1,9 @@
-const fs = require('fs');
 const inquirer = require('inquirer');
+const readmeGenerator = require('./src/README-template.js');
+const { writeFile, copyFile } = require('./utils/generate-file.js');
+
 console.log(
-`
+    `
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ________            ______________  ___    _________            
 ___  __ \\__________ ______  /__   |/  /______  ____/___________ 
@@ -15,15 +17,150 @@ _  _, _//  __/ /_/ // /_/ / _  /  / / /  __/ /_/ / /  __/  / / /
              A Console Based README Generator
              ________________________________
 `);
+
+
 //Prompt for name, github name and email(required)[add to question sections]
-//prompt user for title(Required)
-//prompt user dor description(Required)
-//prompt user for installation instructions
-//prompt user for usage information
-//prompt user for contributions
-//prompt user for guidelines
-//prompt user for test instructions
-//prompt user to choose a license
+const getUserInfo = () => {
+    return inquirer
+        .prompt([
+            {
+                //Get user Name
+                type: 'input',
+                name: 'name',
+                message: 'What is your name?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please enter your name!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //get Github Name
+                type: 'input',
+                name: 'gitName',
+                message: 'What is your Github username?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please enter your Github username!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //get email
+                type: 'input',
+                name: 'email',
+                message: 'What is your contact email?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please enter a contact email!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //Get title
+                type: 'input',
+                name: 'title',
+                message: 'What is your project title?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please must enter a title!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //Get description
+                type: 'input',
+                name: 'description',
+                message: 'Please enter a description of your project?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please must enter a description!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //Get title
+                type: 'input',
+                name: 'title',
+                message: 'What is your project title?',
+                validate: input => {
+                    if (input) {
+                        return true;
+                    } else {
+                        console.log('Please must enter a title!');
+                        return false;
+                    }
+                }
+            },
+            {
+                //Get installation
+                type: 'input',
+                name: 'installation',
+                message: 'Please descripbe the installation of your program(leave blank to omit)?',
+
+            },
+            {
+                //Get usage
+                type: 'input',
+                name: 'usage',
+                message: 'Please descripbe the usage of your program(leave blank to omit)?',
+
+            },
+            {
+                //Get contributors
+                type: 'input',
+                name: 'contributors',
+                message: 'Please list the contributors of your program(leave blank to omit)?',
+
+            },
+            {
+                //Get guidlines
+                type: 'input',
+                name: 'guidlines',
+                message: 'Please enter guidlines for your program(leave blank to omit)?',
+
+            },
+            {
+                //Get test
+                type: 'input',
+                name: 'test',
+                message: 'Please describe a test of your program(leave blank to omit)?',
+
+            },
+            {
+                //Get licence
+                type: 'list',
+                name: 'licence',
+                message: 'Please select a licence?',
+                choices: ['GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense'],
+
+            },
+        ]);
+}
+
+
+
+getUserInfo()
+    .then(readmeInfo => {
+        //concat user info and readme data into one array
+        console.log(readmeInfo);
+        writeFile(readmeGenerator(readmeInfo));
+    });
 
 
 
