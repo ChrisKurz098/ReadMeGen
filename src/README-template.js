@@ -1,4 +1,6 @@
-const readmeText = `
+const readmeGenerator = (userData) =>  { 
+return
+    `
 # Your Project Title
 ## Description 
 ${}
@@ -11,3 +13,4 @@ ${tableOfcontents}
 ## Contributing
 ## Tests
 `
+}
