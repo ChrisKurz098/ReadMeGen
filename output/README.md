@@ -1,48 +1,34 @@
-[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
 
-# werlkwkrlkjwer
+# d
 
 ## Description
-    werkjhwekrjwer 
+    d 
 
 
 ## Table of Contents  
     
 * [Installation](#installation)
 * [Usage](#usage)
-* [Contributors](#contributors)
-* [Guidlines](#guidlines)
-* [Test](#test)
 
 
 ## Installation
-    kjherkwjehrwer
+    d
          
 
 ## Usage
-    ksdfjhskdjhskdfkjhskdf
-         
-
-## Contributors
-    llksdjleileknflskdjfoije
-         
-
-## Guidlines
-    elknvnlkf
-         
-
-## Test
-    adlkjfelaiufja
-        
+    d
+           
 ## Questions
+d              [Github](https://github.com/d)
 
-If you have any questions, contact Boo at:
+If you have any questions, contact d at:
 
-[dsasd](mailto:dsasd)
+[d](mailto:d)
 
-Check me out on [Github](https://github.com/BOOBOO)
+
 
 
 ## Licence
-This software is distributed under the GNU LGPLv3 licence.
+This software is distributed under the GNU AGPLv3 licence.
