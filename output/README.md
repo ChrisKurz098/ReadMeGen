@@ -1,32 +1,48 @@
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
-# ReadMeGen
+
+# werlkwkrlkjwer
 
 ## Description
-    This program will generate a markdown formatted readmefile based off user input 
+    werkjhwekrjwer 
 
 
 ## Table of Contents  
     
 * [Installation](#installation)
 * [Usage](#usage)
+* [Contributors](#contributors)
+* [Guidlines](#guidlines)
+* [Test](#test)
 
 
 ## Installation
-    Requires Node.js and the installation of inquirer via npm
+    kjherkwjehrwer
          
 
 ## Usage
-    This program allows the user to easily create a new README.md file for their projects
-           
+    ksdfjhskdjhskdfkjhskdf
+         
+
+## Contributors
+    llksdjleileknflskdjfoije
+         
+
+## Guidlines
+    elknvnlkf
+         
+
+## Test
+    adlkjfelaiufja
+        
 ## Questions
 
-If you have any questions, contact Chris at:
+If you have any questions, contact Boo at:
 
-[billgonzo123@gmail.com](mailto:billgonzo123@gmail.com)
+[dsasd](mailto:dsasd)
 
-Check me out at [Github](https://github.com/chrisKurz098)
+Check me out on [Github](https://github.com/BOOBOO)
 
 
 ## Licence
-This software is distributed under the GNU AGPLv3 licence.
+This software is distributed under the GNU LGPLv3 licence.

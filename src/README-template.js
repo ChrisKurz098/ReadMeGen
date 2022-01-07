@@ -1,8 +1,8 @@
 
 module.exports = ({ name, gitName, email, title, description,licence, ...rest }) => {
-    licenceData = getLicenceBadge();
-    const readmeText = `
-${licenceData[licence]}
+   
+    let readmeText = `
+
 # ${title}
 
 ## Description
@@ -10,17 +10,23 @@ ${licenceData[licence]}
 ${makeTableOfContents(rest)}
 ${generateSection('Installation', rest.installation)} ${generateSection('Usage', rest.usage)} ${generateSection('Contributors', rest.contributors)} ${generateSection('Guidlines', rest.guidlines)} ${generateSection('Test', rest.test)}
 ## Questions
+${name}              [Github](https://github.com/${gitName})
 
 If you have any questions, contact ${name} at:
 
 [${email}](mailto:${email})
 
-Check me out on [Github](https://github.com/${gitName})
 
-${licenceMessage(licence)}
-${licenceData[licence]}
-`
-    console.log(readmeText);
+
+`;
+if (licence === 'None'){return readmeText;}
+
+const licenceData = getLicenceBadge();
+
+readmeText = `${licenceData[licence]}
+`+readmeText+`
+## Licence
+This software is distributed under the ${licence} licence.`;
     return readmeText;
 }
 
@@ -71,7 +77,7 @@ const generateSection = (title, data) => {
 }
 
 
-const getLicenceBadge = () => {
+const getLicenceBadge = (licence) => {
     licenceObj = {
         'GNU AGPLv3': `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`,
         'GNU GPLv3': `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)` ,
@@ -82,14 +88,8 @@ const getLicenceBadge = () => {
         'Boost Software License 1.0': `[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`  ,
         'The Unlicense': `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)` 
     }
+    if (licence === 'None') {return ''}
     return licenceObj;
 }
 
-const licenceMessage = licence => {
-    
- const text =  `
-## Licence
-This software is distributed under the ${licence} licence.`
-return text;
-}
 

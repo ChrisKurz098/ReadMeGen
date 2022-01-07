@@ -27,7 +27,7 @@ const getUserInfo = () => {
                 //Get user Name
                 type: 'input',
                 name: 'name',
-                message: 'What is your name?',
+                message: 'What is your full name?',
                 validate: input => {
                     if (input) {
                         return true;
@@ -94,31 +94,17 @@ const getUserInfo = () => {
                 }
             },
             {
-                //Get title
-                type: 'input',
-                name: 'title',
-                message: 'What is your project title?',
-                validate: input => {
-                    if (input) {
-                        return true;
-                    } else {
-                        console.log('Please must enter a title!');
-                        return false;
-                    }
-                }
-            },
-            {
                 //Get installation
                 type: 'input',
                 name: 'installation',
-                message: 'Please descripbe the installation of your program(leave blank to omit)?',
+                message: 'Please description the installation of your program(leave blank to omit)?',
 
             },
             {
                 //Get usage
                 type: 'input',
                 name: 'usage',
-                message: 'Please descripbe the usage of your program(leave blank to omit)?',
+                message: 'Please description the usage of your program(leave blank to omit)?',
 
             },
             {
@@ -147,7 +133,7 @@ const getUserInfo = () => {
                 type: 'list',
                 name: 'licence',
                 message: 'Please select a licence?',
-                choices: ['GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense'],
+                choices: ['None','GNU AGPLv3','GNU GPLv3','GNU LGPLv3','Mozilla Public License 2.0','Apache License 2.0','MIT License','Boost Software License 1.0','The Unlicense'],
 
             },
         ]);
