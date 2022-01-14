@@ -4,7 +4,7 @@
 # ReadMeGen
 
 ## Description
-    This program genereates a Markdown formatted README file based off of the users input.
+This program genereates a Markdown formatted README file based off of the users input.
 
 
 ## Table of Contents  
@@ -14,11 +14,11 @@
 
 
 ## Installation
-    Node.js and an installation of inquirer via npm are required to run this program.
+Node.js and an installation of inquirer via npm are required to run this program.
          
 
 ## Usage
-    This programs alllows the user to easily create README.md files for their projects.
+This programs alllows the user to easily create README.md files for their projects.
            
 ## Questions
 Chris Kurz              [Github](https://github.com/chriskurz098)
