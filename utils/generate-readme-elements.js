@@ -30,7 +30,7 @@ const generateSection = (title, data) => {
         return `
 
 ## ${title}
-    ${data}
+${data}
         `}
     return ``;
 }

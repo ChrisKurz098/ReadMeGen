@@ -8,17 +8,15 @@ let readmeText = `
 # ${title}
 
 ## Description
-    ${description} 
-${makeTableOfContents(rest)}
-${generateSection('Installation', rest.installation)} ${generateSection('Usage', rest.usage)} ${generateSection('Contributors', rest.contributors)} ${generateSection('Guidlines', rest.guidlines)} ${generateSection('Test', rest.test)}
+${description} 
+
+${makeTableOfContents(rest)} ${generateSection('Installation', rest.installation)} ${generateSection('Usage', rest.usage)} ${generateSection('Contributors', rest.contributors)} ${generateSection('Guidlines', rest.guidlines)} ${generateSection('Test', rest.test)}
 ## Questions
 ${name}              [Github](https://github.com/${gitName})
 
 If you have any questions, contact ${name} at:
 
 [${email}](mailto:${email})
-
-
 
 `;
 if (licence === 'None'){return readmeText;}
